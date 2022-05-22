@@ -1,0 +1,16 @@
+//common
+@import 'common/reset';
+@import 'common/header';
+@import 'common/footer';
+
+//main
+@import 'main/visual';
+@import 'main/content';
+
+//sub
+@import 'sub/department';
+@import 'sub/community';
+@import 'sub/gallery';
+@import 'sub/youtube';
+@import 'sub/location';
+@import 'sub/join';
