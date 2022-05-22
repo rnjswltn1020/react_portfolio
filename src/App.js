@@ -14,8 +14,28 @@ import Youtube from './component/sub/Youtube';
 import Location from './component/sub/Location';
 import Join from './component/sub/Join';
 
+import { Route } from 'react-router-dom';
+
 function App() {
-	return <h1>Hello</h1>;
+	return (
+		<>
+			<Header />
+
+			<Route exact path='/'>
+				<Visual />
+				<Content />
+			</Route>
+
+			<Route path='/department' component={Department} />
+			<Route path='/community' component={Community} />
+			<Route path='/gallery' component={Gallery} />
+			<Route path='/youtube' component={Youtube} />
+			<Route path='/location' component={Location} />
+			<Route path='/join' component={Join} />
+
+			<Footer />
+		</>
+	);
 }
 
 export default App;
