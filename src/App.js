@@ -13,8 +13,8 @@ import Gallery from './component/sub/Gallery';
 import Youtube from './component/sub/Youtube';
 import Location from './component/sub/Location';
 import Join from './component/sub/Join';
-
 import { Route } from 'react-router-dom';
+import './scss/style.scss';
 
 function App() {
 	return (
@@ -37,5 +37,4 @@ function App() {
 		</>
 	);
 }
-
 export default App;
