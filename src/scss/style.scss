@@ -1,7 +1,11 @@
+$tablet: 1179px;
+$mp: 539px;
+
 //common
 @import 'common/reset';
 @import 'common/header';
 @import 'common/footer';
+@import 'common/layout';
 
 //main
 @import 'main/visual';

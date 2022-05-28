@@ -1,7 +1,14 @@
 import React from 'react';
 
 function Community() {
-	return <div>Community</div>;
+	return (
+		<section className='content'>
+			<figure></figure>
+			<div className='inner'>
+				<h1>Community</h1>
+			</div>
+		</section>
+	);
 }
 
 export default Community;
