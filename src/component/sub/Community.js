@@ -2,7 +2,7 @@ import Layout from '../common/Layout';
 
 function Community() {
 	return (
-		<Layout name={'Communtiy'}>
+		<Layout name={'Community'}>
 			<p>Community</p>
 		</Layout>
 	);

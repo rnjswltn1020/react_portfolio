@@ -10,6 +10,16 @@
 		min-height: 400px;
 		margin: 100px auto;
 		position: relative;
+		transform: translateY(100px);
+		opacity: 0;
+		transition: 1s;
+	}
+
+	&.on {
+		> .inner {
+			opacity: 1;
+			transform: translateY(0px);
+		}
 	}
 }
 
