@@ -35,6 +35,15 @@ header {
 				}
 			}
 		}
+
+		.fa-bars {
+			position: absolute;
+			right: 30px;
+			bottom: 20px;
+			font-size: 24px;
+			color: #fff;
+			display: none;
+		}
 	}
 
 	&.main {
@@ -43,5 +52,24 @@ header {
 		left: 0px;
 		z-index: 2;
 		background: transparent;
+	}
+}
+
+//tablet
+@media screen and (max-width: $tablet) {
+	header {
+		.inner {
+			width: 100%;
+
+			h1 {
+				left: 30px;
+			}
+			#gnb {
+				display: none;
+			}
+			.fa-bars {
+				display: block;
+			}
+		}
 	}
 }
