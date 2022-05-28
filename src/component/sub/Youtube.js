@@ -1,13 +1,10 @@
-import React from 'react';
+import Layout from '../common/Layout';
 
 function Youtube() {
 	return (
-		<section className='content'>
-			<figure></figure>
-			<div className='inner'>
-				<h1>Youtbue</h1>
-			</div>
-		</section>
+		<Layout>
+			<p>Youtbe</p>
+		</Layout>
 	);
 }
 
