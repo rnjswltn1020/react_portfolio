@@ -13,18 +13,21 @@ import Gallery from './component/sub/Gallery';
 import Youtube from './component/sub/Youtube';
 import Location from './component/sub/Location';
 import Join from './component/sub/Join';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './scss/style.scss';
 
 function App() {
 	return (
 		<>
-			<Header />
+			<Switch>
+				<Route exact path='/'>
+					<Header type={'main'} />
+					<Visual />
+					<Content />
+				</Route>
 
-			<Route exact path='/'>
-				<Visual />
-				<Content />
-			</Route>
+				<Route path='/' render={() => <Header type={'sub'} />} />
+			</Switch>
 
 			<Route path='/department' component={Department} />
 			<Route path='/community' component={Community} />
