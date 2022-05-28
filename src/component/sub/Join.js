@@ -2,7 +2,7 @@ import Layout from '../common/Layout';
 
 function Join() {
 	return (
-		<Layout>
+		<Layout name={'Join'}>
 			<p>Join</p>
 		</Layout>
 	);
