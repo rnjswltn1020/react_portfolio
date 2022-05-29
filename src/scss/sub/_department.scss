@@ -1,6 +1,6 @@
 .Department {
 	figure {
-		background: lightpink;
+		background: #ddd;
 	}
 
 	> .inner {
@@ -13,8 +13,8 @@
 			article {
 				width: 33.333%;
 				float: left;
-				padding: 10px;
-				margin-bottom: 20px;
+				padding: 30px;
+				margin-bottom: 30px;
 
 				.inner {
 					width: 100%;

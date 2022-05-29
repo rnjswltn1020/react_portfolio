@@ -1,6 +1,7 @@
 header {
 	width: 100%;
-	background: #222;
+	background: #fff;
+	border-bottom: 1px solid #999;
 
 	.inner {
 		width: 1180px;
@@ -15,7 +16,7 @@ header {
 
 			a {
 				font: bold 24px/1 'arial';
-				color: #fff;
+				color: #555;
 			}
 		}
 
@@ -31,7 +32,7 @@ header {
 					display: inline-block;
 					padding: 20px 30px;
 					font: bold 14px/1 'arial';
-					color: #fff;
+					color: #888;
 				}
 			}
 		}
@@ -41,7 +42,7 @@ header {
 			right: 30px;
 			bottom: 20px;
 			font-size: 24px;
-			color: #fff;
+			color: #888;
 			display: none;
 		}
 	}
@@ -52,6 +53,21 @@ header {
 		left: 0px;
 		z-index: 2;
 		background: transparent;
+
+		> .inner {
+			h1 {
+				color: #fff;
+			}
+
+			#gnb {
+				li a {
+					color: #fff;
+				}
+			}
+			.fa-bars {
+				color: #fff;
+			}
+		}
 	}
 }
 
