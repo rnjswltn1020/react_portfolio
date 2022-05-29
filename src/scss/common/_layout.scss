@@ -3,6 +3,8 @@
 		width: 100%;
 		height: 300px;
 		background: gray;
+		opacity: 0;
+		transition: 2s;
 	}
 
 	> .inner {
@@ -16,6 +18,9 @@
 	}
 
 	&.on {
+		figure {
+			opacity: 1;
+		}
 		> .inner {
 			opacity: 1;
 			transform: translateY(0px);

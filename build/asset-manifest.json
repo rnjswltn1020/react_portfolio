@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react_may/static/css/main.cbb07f1b.css",
+    "main.js": "/react_may/static/js/main.8be4c260.js",
+    "index.html": "/react_may/index.html",
+    "main.cbb07f1b.css.map": "/react_may/static/css/main.cbb07f1b.css.map",
+    "main.8be4c260.js.map": "/react_may/static/js/main.8be4c260.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cbb07f1b.css",
+    "static/js/main.8be4c260.js"
+  ]
+}
