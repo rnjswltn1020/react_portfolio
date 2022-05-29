@@ -1,20 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Work+Sans:wght@100;200&display=swap");
+
 $tablet: 1179px;
 $mp: 539px;
 
 //common
-@import 'common/reset';
-@import 'common/header';
-@import 'common/footer';
-@import 'common/layout';
+@import "common/reset";
+@import "common/header";
+@import "common/footer";
+@import "common/layout";
+@import "common/popup";
 
 //main
-@import 'main/visual';
-@import 'main/content';
+@import "main/visual";
+@import "main/content";
 
 //sub
-@import 'sub/department';
-@import 'sub/community';
-@import 'sub/gallery';
-@import 'sub/youtube';
-@import 'sub/location';
-@import 'sub/join';
+@import "sub/department";
+@import "sub/community";
+@import "sub/gallery";
+@import "sub/youtube";
+@import "sub/location";
+@import "sub/join";

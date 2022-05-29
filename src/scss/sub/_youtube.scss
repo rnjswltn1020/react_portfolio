@@ -1,5 +1,60 @@
-.Youtube {
-	figure {
-		background: yellowgreen;
-	}
+.youtube {
+  figure {
+    background: #ddd;
+  }
+
+  article {
+    border-top: 1px solid #aaa;
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h2 {
+      width: 20%;
+      font-size: 18px;
+      color: #222;
+    }
+    .txt {
+      width: 40%;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+
+      p {
+        font-size: 12px/1.2 "arial";
+        color: #888;
+        filter: saturate(0);
+        cursor: pointer;
+
+        &:hover {
+          filter: saturate(1.2);
+        }
+      }
+
+      span {
+        font: 12px/1 "orbitron";
+        letter-spacing: 1px;
+        color: orange;
+      }
+    }
+    .pic {
+      width: 40%;
+      height: 250px;
+      background: #000;
+      filter: saturate(0);
+      cursor: pointer;
+      transition: 1s;
+
+      &:hover {
+        filter: saturate(1.2);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }

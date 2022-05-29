@@ -1,69 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
-
 .content {
-	figure {
-		width: 100%;
-		height: 300px;
-		background: gray;
-		opacity: 0;
-		transition: 2s;
-	}
+  figure {
+    width: 100%;
+    height: 300px;
+    background: gray;
+    opacity: 0;
+    transition: 2s;
+  }
 
-	> .inner {
-		width: 1180px;
-		min-height: 400px;
-		margin: 100px auto;
-		position: relative;
-		transform: translateY(100px);
-		opacity: 0;
-		transition: 1s;
+  > .inner {
+    width: 1180px;
+    min-height: 400px;
+    margin: 100px auto;
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
 
-		h1 {
-			font: bold 70px/1 'work sans';
-			color: #444;
-			margin-bottom: 70px;
+    h1 {
+      font: bold 70px/1 "work sans";
+      color: #444;
+      margin-bottom: 70px;
 
-			&::after {
-				content: '';
-				display: block;
-				width: 80px;
-				height: 2px;
-				background: #333;
-				margin-top: 30px;
-			}
-		}
-	}
+      &::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 2px;
+        background: #333;
+        margin-top: 30px;
+      }
+    }
+  }
 
-	&.on {
-		figure {
-			opacity: 1;
-		}
-		> .inner {
-			opacity: 1;
-			transform: translateY(0px);
-		}
-	}
+  &.on {
+    figure {
+      opacity: 1;
+    }
+    > .inner {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 }
 
 //table
 @media screen and (max-width: $tablet) {
-	.content {
-		figre {
-			height: 200px;
-		}
-		> .inner {
-			width: 100%;
-			margin: 80px auto;
-			padding: 0px 30px;
-		}
-	}
+  .content {
+    figre {
+      height: 200px;
+    }
+    > .inner {
+      width: 100%;
+      margin: 80px auto;
+      padding: 0px 30px;
+    }
+  }
 }
 
 //mp
 @media screen and (max-width: $mp) {
-	.content {
-		figre {
-			height: 150px;
-		}
-	}
+  .content {
+    figre {
+      height: 150px;
+    }
+  }
 }
