@@ -2,4 +2,53 @@
 	figure {
 		background: lightpink;
 	}
+
+	> .inner {
+		.wrap {
+			&::after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+			article {
+				width: 33.333%;
+				float: left;
+				padding: 10px;
+				margin-bottom: 20px;
+
+				.inner {
+					width: 100%;
+
+					.pic {
+						width: 100%;
+						height: 300px;
+						background: #000;
+						margin-bottom: 20px;
+						filter: saturate(0.2);
+						transition: 0.5s;
+
+						&:hover {
+							filter: saturate(1.2);
+						}
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+
+					h2 {
+						font: normal 24px/1 'arial';
+						color: #666;
+						margin-bottom: 10px;
+					}
+					p {
+						font: 14px/1 'arial';
+						color: #777;
+					}
+				}
+			}
+		}
+	}
 }

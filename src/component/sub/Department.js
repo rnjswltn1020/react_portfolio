@@ -14,19 +14,21 @@ function Department() {
 
 	return (
 		<Layout name={'Department'}>
-			{members.map((member, idx) => {
-				return (
-					<article key={idx}>
-						<div className='inner'>
-							<div className='pic'>
-								<img src={`${path}/img/${member.pic}`} alt={member.name} />
+			<div className='wrap'>
+				{members.map((member, idx) => {
+					return (
+						<article key={idx}>
+							<div className='inner'>
+								<div className='pic'>
+									<img src={`${path}/img/${member.pic}`} alt={member.name} />
+								</div>
+								<h2>{member.name}</h2>
+								<p>{member.position}</p>
 							</div>
-							<h2>{member.name}</h2>
-							<p>{member.position}</p>
-						</div>
-					</article>
-				);
-			})}
+						</article>
+					);
+				})}
+			</div>
 		</Layout>
 	);
 }

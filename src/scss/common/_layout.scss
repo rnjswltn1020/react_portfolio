@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
+
 .content {
 	figure {
 		width: 100%;
@@ -15,6 +17,21 @@
 		transform: translateY(100px);
 		opacity: 0;
 		transition: 1s;
+
+		h1 {
+			font: bold 70px/1 'work sans';
+			color: #444;
+			margin-bottom: 70px;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 80px;
+				height: 2px;
+				background: #333;
+				margin-top: 30px;
+			}
+		}
 	}
 
 	&.on {
