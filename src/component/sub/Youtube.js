@@ -5,23 +5,30 @@ import { faBreadSlice } from "@fortawesome/free-solid-svg-icons";
 import Popup from "../common/Popup";
 
 function Youtube() {
-  const key = "AIzaSyCghGCPSnUES2vmjiTpjw_xeg9PhKxKa90";
-  const num = 5;
-  const playList = "PLE5psCknqIPLt8dWGEUEoonb_DANXf3iZ";
-  const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playList}&maxResults=${num}`;
-  const [vids, setvids] = useState([]);
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
+  const fetchYoutube = () => {
+    const key = "AIzaSyCghGCPSnUES2vmjiTpjw_xeg9PhKxKa90";
+    const num = 8;
+    const playList = "PLE5psCknqIPLt8dWGEUEoonb_DANXf3iZ";
+    const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playList}&maxResults=${num}`;
     axios.get(url).then((json) => {
-      setvids(json.data.items);
+      setVids(json.data.items);
     });
-  }, []);
-  console.log(vids);
+    console.log(Vids);
+  };
+
+  const hadlePopup = (idx) => {
+    setOpen(true);
+    setTarget(idx);
+  };
+  const [Vids, setVids] = useState([]);
+  const [Open, setOpen] = useState(false);
+  const [Target, setTarget] = useState("");
+  useEffect(fetchYoutube, []);
+
   return (
     <>
       <Layout name={"youtube"}>
-        {vids.map((vid, idx) => {
+        {Vids.map((vid, idx) => {
           const tit = vid.snippet.title;
           const desc = vid.snippet.description;
           const date = vid.snippet.publishedAt;
@@ -33,7 +40,12 @@ function Youtube() {
                 <p>{desc.length > 200 ? desc.slice(0, 200) : desc}</p>
                 <span>{date.split("T")[0]}</span>
               </div>
-              <div className="pic" onClick={() => setOpen(true)}>
+              <div
+                className="pic"
+                onClick={() => {
+                  hadlePopup(idx);
+                }}
+              >
                 <img
                   src={vid.snippet.thumbnails.medium.url}
                   alt={vid.snippet.title}
@@ -43,7 +55,14 @@ function Youtube() {
           );
         })}
       </Layout>
-      {open ? <Popup setOpen={setOpen} /> : null}
+      {Open && (
+        <Popup setOpen={setOpen}>
+          <iframe
+            src={`https://www.youtube.com/embed/${Vids[Target].snippet.resourceId.videoId}`}
+            frameBorder="1"
+          ></iframe>
+        </Popup>
+      )}
     </>
   );
 }

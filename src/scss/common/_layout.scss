@@ -9,12 +9,12 @@
 
   > .inner {
     width: 1180px;
-    min-height: 400px;
+    min-height: 800px;
     margin: 100px auto;
     position: relative;
     transform: translateY(100px);
     opacity: 0;
-    transition: 1s;
+    transition: opacity 1s, transform 1s;
 
     h1 {
       font: bold 70px/1 "work sans";

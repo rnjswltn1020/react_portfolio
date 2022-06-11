@@ -1,5 +1,67 @@
 .Join {
-	figure {
-		background: darkseagreen;
-	}
+  figure {
+    background: darkseagreen;
+  }
+
+  table {
+    width: 100%;
+    border-top: 2px solid #444;
+    border-bottom: 1px solid #444;
+
+    th {
+      width: 25%;
+      padding: 14px 0px;
+      padding-left: 30px;
+      text-align: left;
+      border-bottom: 1px solid #bbb;
+
+      &:last-child {
+        text-align: center;
+
+        input[type="submit"],
+        input[type="reset"] {
+          width: 150px;
+          height: 30px;
+          border: none;
+          background: #333;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          font: 12px/1 "arial";
+          color: #fff;
+          margin: 0px 10px;
+        }
+      }
+    }
+    td {
+      border-bottom: 1px solid #bbb;
+      border-left: 1px solid #bbb;
+      padding: 14px 0px;
+      padding-left: 30px;
+
+      input[type="text"],
+      input[type="password"],
+      textarea,
+      select {
+        border: 1px solid #aaa;
+        padding: 8px 20px;
+        width: 40%;
+        resize: none;
+      }
+
+      label {
+        margin-right: 4px;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 30px;
+      }
+
+      .err {
+        font: 11px/1 "맑은 고딕";
+        color: hotpink;
+        margin-left: 20px;
+      }
+    }
+  }
 }

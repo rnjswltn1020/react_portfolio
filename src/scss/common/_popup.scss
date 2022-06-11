@@ -11,8 +11,20 @@
   .cons {
     width: 100%;
     height: 100%;
-    border: 1px solid #ccc;
     position: relative;
+
+    video,
+    iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
 
     .close {
       font: 14px/1 "arial";

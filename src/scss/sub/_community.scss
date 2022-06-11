@@ -1,5 +1,59 @@
 .Community {
-	figure {
-		background: lightsalmon;
-	}
+  figure {
+    background: lightsalmon;
+  }
+
+  > .inner {
+    .inputBox {
+      border: 1px solid #bbb;
+      padding: 50px;
+      margin-bottom: 50px;
+
+      input[type="text"],
+      textarea {
+        width: 50%;
+        padding: 8px 10px;
+        border: 1px solid #aaa;
+        margin-bottom: 20px;
+        resize: none;
+      }
+
+      .btnSet {
+        display: flex;
+        gap: 10px;
+        button {
+          width: 150px;
+          height: 30px;
+          background: #ddd;
+        }
+      }
+    }
+
+    .showBox {
+      border: 1px solid #bbb;
+      padding: 50px;
+
+      article {
+        background: #fff;
+        padding: 30px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+
+        .txt {
+          width: 60%;
+        }
+
+        .btnSet {
+          display: flex;
+          gap: 4px;
+          align-items: center;
+
+          button {
+            padding: 5px 10px;
+          }
+        }
+      }
+    }
+  }
 }

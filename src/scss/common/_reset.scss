@@ -1,16 +1,30 @@
 * {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 ul,
 ol,
 li {
-	list-style: none;
+  list-style: none;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 body {
-	background: #efefef;
+  background: #efefef;
+}
+
+legend,
+caption {
+  position: absolute;
+  top: -99999em;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
 }
