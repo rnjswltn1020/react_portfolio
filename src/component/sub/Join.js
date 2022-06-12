@@ -27,15 +27,15 @@ function Join() {
     const num = /[0-9]/;
     const spc = /[!@#$%^&*()_+]/;
 
-    if (Val.userid.length < 5) {
+    if (val.userid.length < 5) {
       errs.userid = "아이디를 5글자 이상 입력하세요.";
     }
-    if (Val.email.length < 8 || !/@/.test(val.email)) {
+    if (val.email.length < 8 || !/@/.test(val.email)) {
       errs.email = "이메일은 최소 8글자 이상 @를 포함해주세요.";
     }
 
     if (
-      Val.pwd1.length < 5 ||
+      val.pwd1.length < 5 ||
       !eng.test(Val.pwd1) ||
       !num.test(Val.pwd1) ||
       !spc.test(Val.pwd1)
@@ -45,23 +45,23 @@ function Join() {
     }
 
     //pwd2 체크항목
-    if (Val.pwd1 !== Val.pwd2 || !Val.pwd2) {
+    if (val.pwd1 !== Val.pwd2 || !Val.pwd2) {
       errs.pwd2 = "비밀번호를 동일하게 입력해주세요";
     }
-    //pwd2 체크항목
-    if (!Val.gender) {
+    //성별 체크항목
+    if (!val.gender) {
       errs.gender = "성별을 선택해주세요.";
     }
 
-    if (!Val.interests) {
+    if (!val.interests) {
       errs.interests = "관심사를 하나이상 선택해주세요.";
     }
 
-    if (!Val.edu) {
+    if (!val.edu) {
       errs.edu = "최종학력을 선택해주세요.";
     }
 
-    if (Val.cmmts.length < 20) {
+    if (val.cmmts < 20) {
       errs.cmmts = "남기는말은 20글자 이상 입력해주세요.";
     }
     return errs;
@@ -78,7 +78,9 @@ function Join() {
   const handleRadio = (e) => {
     const { name } = e.target;
     const isCheck = e.target.checked;
-    setVal({ ...Val, [name]: isCheck });
+    const checkedVal = e.target.parentElement.querySelector(":checked").value;
+
+    setVal({ ...Val, [name]: checkedVal });
   };
 
   const handleCheck = (e) => {
@@ -106,7 +108,7 @@ function Join() {
   };
 
   const handleSubmit = (e) => {
-    // 순서 2: check 함수 호출해서 Val 값에 담겨있는 값을 check 함수의 인수로 전달해서 err객체를 생성해서 반환 => 반환된 에러객체는 닷 ㅣerr state에 옮겨담음.
+    // 순서 2: check 함수 호출해서 Val 값에 담겨있는 값을 check 함수의 인수로 전달해서 err객체를 생성해서 반환 => 반환된 에러객체는 다시 err state에 옮겨담음.
     e.preventDefault();
     setErr(check(Val));
   };
@@ -205,6 +207,7 @@ function Join() {
                     id="male"
                     name="gender"
                     onChange={handleRadio}
+                    value="male"
                   />
                   <label htmlFor="female">Female</label>
                   <input
@@ -212,6 +215,7 @@ function Join() {
                     id="female"
                     name="gender"
                     onChange={handleRadio}
+                    value="female"
                   />
                   <span className="err">{Err.gender}</span>
                 </td>

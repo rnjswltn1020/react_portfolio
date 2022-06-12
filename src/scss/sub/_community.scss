@@ -35,26 +35,130 @@
 
       article {
         background: #fff;
-        padding: 30px;
+        padding: 30px 40px;
         margin-bottom: 40px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+        align-content: center;
 
         .txt {
-          width: 60%;
+          width: 75%;
+
+          input,
+          textarea {
+            width: 70%;
+            border: 1px solid #bbb;
+            padding: 8px 12px;
+            margin-bottom: 10px;
+          }
         }
 
         .btnSet {
           display: flex;
           gap: 4px;
           align-items: center;
+          justify-content: felx-end;
 
           button {
-            padding: 5px 10px;
             background: #fff;
+            margin-left: 10px;
+            width: 100px;
+            height: 26px;
+            font: 11px/1 "arial";
+            color: #999;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+
+            &:hover {
+              border: 1px solid #333;
+              background: #333;
+              cursor: pointer;
+              color: orange;
+            }
           }
         }
       }
     }
   }
+}
+
+@media screen and (max-width: $tablet) {
+  .Community {
+    figure {
+      background: rgb(151, 95, 74);
+    }
+
+    > .inner {
+      .inputBox {
+        border: 1px solid #bbb;
+        padding: 50px;
+        margin-bottom: 50px;
+
+        input[type="text"],
+        textarea {
+          width: 100%;
+        }
+
+        .btnSet {
+          display: flex;
+          gap: 10px;
+          justify-content: space-between;
+
+          button {
+            width: 48%;
+          }
+        }
+      }
+
+      .showBox {
+        article {
+          width: 100%;
+
+          .txt {
+            width: 100%;
+            margin-bottom: 10px;
+            min-height: 180px;
+
+            input,
+            textarea {
+              width: 100%;
+            }
+          }
+
+          .btnSet {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            button {
+              background: #fff;
+              margin-left: 10px;
+              width: 100px;
+              height: 26px;
+              font: 11px/1 "arial";
+              color: #999;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              transition: 0.4s;
+
+              &:hover {
+                border: 1px solid #333;
+                background: #333;
+                cursor: pointer;
+                color: orange;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width = table) {
 }
